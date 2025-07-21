@@ -1,0 +1,28 @@
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">About Me</h2>
+    <div class="cards-grid">
+
+     @@include("templates/modules/partials/card.html", {
+        "icon": "💻",
+        "title": "Frontend Development",
+        "description": "Building responsive, modern, and accessible web interfaces using HTML, SCSS, JavaScript, and WordPress (ACF)."
+      })
+
+      @@include("templates/modules/partials/card.html", {
+        "icon": "⚙️",
+        "title": "DevOps & Monitoring",
+        "description": "Ensuring website uptime, performance, and stability through tools like BetterStack, Azure, and Lighthouse."
+      })
+
+      @@include("templates/modules/partials/card.html", {
+        "icon": "🤖",
+        "title": "AI Automation",
+        "description": "Streamlining workflows using tools like n8n, Browserflow, and OpenAI to build smart internal automations."
+      })
+
+
+    </div>
+  </div>
+</section>

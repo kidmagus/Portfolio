@@ -1,0 +1,63 @@
+{
+	"name": "proj",
+	"version": "1.0.0",
+	"main": "gulpfile.babel.js",
+	"scripts": {
+		"dev": "cross-env NODE_ENV=developmnent gulp",
+		"watch": "npm run dev",
+		"publish": "cross-env NODE_ENV=production gulp publish",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"keywords": [],
+	"description": "",
+	"dependencies": {
+		"@splidejs/splide": "^4.1.4",
+		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
+		"include-media": "^2.0.0",
+		"modernizr": "^3.13.1",
+		"normalize": "^0.3.1"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@babel/core": "^7.10.4",
+		"@babel/preset-env": "^7.10.4",
+		"@babel/register": "^7.10.4",
+		"babelify": "^10.0.0",
+		"browser-sync": "^3.0.4",
+		"browserify": "^16.5.2",
+		"browserify-shim": "^3.8.16",
+		"cross-env": "^7.0.3",
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-dart-sass": "^1.1.0",
+		"gulp-file-include": "^2.2.2",
+		"gulp-iconfont": "^10.0.3",
+		"gulp-iconfont-css": "^3.0.0",
+		"gulp-inject-string": "^1.1.2",
+		"gulp-notify": "^5.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-pretty-html": "^2.0.10",
+		"gulp-replace": "^1.1.4",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-uglify": "^3.0.2",
+		"sass": "^1.89.2",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"browserify": {
+		"transform": [
+			"browserify-shim"
+		]
+	},
+	"browserify-shim": {
+		"jquery": "$",
+		"modernizr": {
+			"exports": "Modernizr"
+		}
+	}
+}

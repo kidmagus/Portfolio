@@ -1,0 +1,97 @@
+@use '../utilities/variables' as *;
+@use './mixins/rem' as * ;
+@use './mixins/breakpoints' as *;
+@use './vendors/include-media' as *;
+
+  /* Hero Carousel */
+        .hero-section {
+            // margin-top: 80px;
+            position: relative;
+        }
+
+        .hero-carousel {
+            height: 100vh;
+            min-height: rem(600px);
+        }
+
+        .hero-slide {
+            position: relative;
+            height: 100vh;
+            min-height: rem(600px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(5px); // blur strength here
+            z-index: 0;
+            transform: scale(1.1); // optional: prevents blur cutoff on edges
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            max-width: rem(800px);
+            padding: 0 rem(20px);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            margin-bottom: rem(15px);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            margin-bottom: rem(20px);
+            opacity: 0.9;
+
+            @include media ('>tablet') {
+                font-size: 1.25rem;
+            }
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            padding: rem(15px) rem(25px);
+            background: $gradient-accent;
+            color: white;
+            text-decoration: none;
+            border-radius: rem(50px);
+            font-weight: $font-weight-semiBold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-xl;
+        }
+
+
+        .splide__arrow {
+            background: none;
+
+            svg {
+                fill: white;
+                width: rem(40px);
+                height: rem(40px);
+            }
+        }

@@ -1,0 +1,268 @@
+@use '../utilities/variables' as *;
+@use './mixins/rem' as * ;
+@use './mixins/breakpoints' as *;
+@use './vendors/include-media' as *;
+
+   /* Tiles Section */
+        .tiles-section {
+            padding: 6rem 0;
+            background: $bg-secondary;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tiles-container {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 3rem;
+            text-align: center;
+
+            @include media ('>tablet') {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+                min-height: 600px;
+
+                .tiles-left {
+                    order: 1;
+                }
+
+                .tiles-right {
+                    order: 2;
+                }
+
+                 &.rtl {
+                    .tiles-left {
+                        order: 2;
+                    }
+
+                    .tiles-right {
+                        order: 1;
+                    }
+                }
+            }
+        }
+
+        .tiles-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .name-tile {
+            background: white;
+            padding: 2em;
+            border-radius: 25px;
+            box-shadow: $shadow-lg;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            @include media ('>tablet') {
+               padding: 3em;
+            }
+        }
+
+        .name-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: $gradient-primary;
+        }
+
+        .display-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: $gradient-primary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+
+            @include media ('>tablet') {
+                font-size: 3rem;
+            }
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: $text-secondary;
+            margin-bottom: 1.5rem;
+        }
+
+        .decorative-line {
+            width: 60px;
+            height: 4px;
+            background: $gradient-accent;
+            border-radius: 2px;
+        }
+
+        .info-tiles {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            
+            @include media ('>tablet') {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .info-tile {
+            background: white;
+            padding: rem(10px);
+            border-radius: 20px;
+            box-shadow: $shadow-md;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+
+        .info-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: $shadow-lg;
+        }
+
+        .tile-icon {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            background: $gradient-accent;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .tile-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .tile-label {
+            font-size: 0.8rem;
+            color: $text-secondary;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .tile-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $text-primary;
+        }
+
+        .tiles-right {
+            position: relative;
+        }
+
+        .image-tile {
+            position: relative;
+            aspect-ratio: 4/5;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: $shadow-xl;
+            background: $gradient-primary;
+
+    
+            @include media ('<tablet') {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background: $gradient-primary;
+        }
+
+        .placeholder {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                border-radius: 30px;
+            }
+        }
+
+        .placeholder-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .placeholder-hint {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-tile:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .floating-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .dot-1 {
+            top: 20%;
+            right: 15%;
+            animation-delay: 0s;
+        }
+
+        .dot-2 {
+            bottom: 30%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+
+        .dot-3 {
+            top: 60%;
+            right: 25%;
+            animation-delay: 4s;
+        }

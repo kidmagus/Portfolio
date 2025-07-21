@@ -1,0 +1,36 @@
+@use './mixins/rem' as * ;
+@use './mixins/breakpoints' as *;
+@use './vendors/include-media' as *;
+
+
+h1 {
+    font-size: rem(40px);
+
+    @include media ('>tablet') {
+        font-size: rem(64px);
+    }
+}
+
+h2 {
+    font-size: rem(28px);
+
+    @include media ('>tablet') {
+        font-size: rem(52px);
+    }
+}
+
+h3 {
+    font-size: rem(24px);
+
+    @include media ('>tablet') {
+        font-size: rem(24px);
+    }
+}
+
+p {
+    font-size: rem(16px);
+
+    @include media ('>tablet') {
+        font-size: rem(20px);
+    }
+}

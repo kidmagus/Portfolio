@@ -1,0 +1,9 @@
+# Ignore installed npm modules.
+node_modules
+
+# Ignore build folder
+build
+dist
+
+# Ignore generated .scss components
+src/scss/utilities/_icons.scss

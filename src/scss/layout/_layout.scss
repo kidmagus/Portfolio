@@ -1,0 +1,28 @@
+// Variables (adjust to your design)
+$container-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+// Loop to generate .container-sm, .container-md, etc.
+@each $breakpoint, $max-width in $container-widths {
+  .container-#{$breakpoint} {
+    max-width: $max-width;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

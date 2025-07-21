@@ -1,0 +1,71 @@
+@use '../utilities/variables' as *;
+@use './mixins/rem' as * ;
+@use './mixins/breakpoints' as *;
+@use './vendors/include-media' as *;
+
+/* Accordions */
+        .accordion-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: 1px solid $border-color;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: $shadow-sm;
+        }
+
+        .accordion-header {
+            background: $bg-secondary;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background: #f1f5f9;
+        }
+
+        .accordion-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .accordion-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            padding: 0 1.5rem; // Only horizontal padding initially
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            opacity: 1;
+            padding: 1.5rem; // Add full padding when active
+        }
+
+        .accordion-item.active .accordion-header {
+            background-color: $secondary-color;
+            color: $text-light;
+        }
+
+        .accordion-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }

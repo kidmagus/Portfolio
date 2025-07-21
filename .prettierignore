@@ -1,0 +1,7 @@
+build
+dist
+node_modules
+package.json
+package-lock.json
+src/html/templates/site
+src/html/pages

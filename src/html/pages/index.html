@@ -1,0 +1,75 @@
+@@include("templates/site/doc-top.html", {
+  "title": "Home",
+  "htmlClass": "",
+  "bodyClass": "homepage"
+})
+
+@@include("shared/header.html")
+
+@@include("templates/modules/hero.html")
+
+@@include('templates/modules/tiles.html', {
+  "id": "profile",
+  "name": "Matthew Samson",
+  "tagline": "Frontend Developer",
+  "image_position": "right",
+
+  "tile_a_icon": "📍",
+  "tile_a_label": "Location",
+  "tile_a_value": "Philippines",
+  "tile_a_link": "",
+
+  "tile_b_icon": "💼",
+  "tile_b_label": "Experience",
+  "tile_b_value": "1+ Year",
+  "tile_b_link": "",
+
+  "tile_c_icon": "✨",
+  "tile_c_label": "Projects",
+  "tile_c_value": "25+",
+  "tile_c_link": "",
+
+  "tile_d_icon": "🎯",
+  "tile_d_label": "Focus",
+  "tile_d_value": "AI Automation & Web Development",
+  "tile_d_link": "",
+})
+
+@@include("templates/modules/about.html")
+
+@@include("templates/modules/services.html")
+
+@@include("templates/modules/accordions.html")
+
+@@include('templates/modules/tiles.html', {
+  "id": "contact",
+  "name": "Contact me",
+  "tagline": "",
+  "image_position": "left",
+
+  "tile_a_icon": "🔗",
+  "tile_a_label": "LinkedIn",
+  "tile_a_value": "Matthew Samson",
+  "tile_a_link": "https://www.linkedin.com/in/matthew-samson-52a461336/",
+
+  "tile_b_icon": "✉️",
+  "tile_b_label": "Gmail",
+  "tile_b_value": "msamson1412@gmail.com",
+  "tile_b_link": "mailto:msamson1412@gmail.com",
+
+  "tile_c_icon": "📞",
+  "tile_c_label": "WhatsApp / Telegram",
+  "tile_c_value": "+63 9956785012",
+  "tile_c_link": "https://wa.me/639956785012",
+
+  "tile_d_icon": "✉️",
+  "tile_d_label": "Outlook",
+  "tile_d_value": "msamson19@outlook.com",
+  "tile_d_link": "mailto:msamson19@outlook.com"
+})
+
+
+@@include("shared/footer.html")
+
+
+@@include("templates/site/doc-bottom.html")

@@ -1,0 +1,30 @@
+<!-- partials/hero.html -->
+<section id="home" class="hero-section">
+  <div class="splide hero-carousel">
+    <div class="splide__track">
+      <ul class="splide__list">
+        @@include('templates/modules/partials/hero-slide.html', {
+          "background": "url('images/hero1.jpg')",
+          "title": "Designing the Web, One Pixel at a Time",
+          "subtitle": "Modern, responsive, and user-focused websites that perform",
+          "ctaLink": "#portfolio",
+          "ctaText": "View My Work"
+        })
+        @@include('templates/modules/partials/hero-slide.html', {
+          "background": "url('images/hero2.jpg')",
+          "title": "Blending Logic with Imagination",
+          "subtitle": "Merging design and functionality to build seamless digital experiences.",
+          "ctaLink": "#services",
+          "ctaText": "My Services"
+        })
+        @@include('templates/modules/partials/hero-slide.html', {
+          "background": "url('images/hero3.jpg')",
+          "title": "Turning Ideas Into Interactive Experiences",
+          "subtitle": "From Figma to frontend — I bring visions to life.",
+          "ctaLink": "#contact",
+          "ctaText": "Let's Connect"
+        })
+      </ul>
+    </div>
+  </div>
+</section>

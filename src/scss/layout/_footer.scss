@@ -1,0 +1,11 @@
+   /* Footer */
+
+@use '../utilities/variables' as *;
+
+
+        .footer {
+            background: $bg-dark;
+            color: $text-light;
+            text-align: center;
+            padding: 3rem 0;
+        }

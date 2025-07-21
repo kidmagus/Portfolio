@@ -1,0 +1,37 @@
+@use '../utilities/variables' as *;
+@use './mixins/rem' as * ;
+@use './mixins/breakpoints' as *;
+@use './vendors/include-media' as *;
+/* Section styles */
+        .section {
+            padding: 3rem 0;
+            background-color: $bg-secondary;
+            @include media ('>phone') {
+                padding: 5rem 0;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+
+            @include media ('>tablet') {
+                padding: 1rem 2rem;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: $gradient-primary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            @include media ('>tablet') {
+                font-size: 2.5rem;
+            }
+        }
