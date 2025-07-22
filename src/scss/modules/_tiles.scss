@@ -44,6 +44,11 @@
             }
         }
 
+        .tiles-container:not(:has(.tiles-right)) {
+            grid-template-columns: 1fr;
+            text-align: center;          
+        }
+
         .tiles-left {
             display: flex;
             flex-direction: column;

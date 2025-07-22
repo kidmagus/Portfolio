@@ -1,0 +1,64 @@
+<section id="@@id" class="tiles-section">
+  <div class="container">
+    <div class="tiles-container @@if (image_position === 'left') { rtl }">
+      <!-- Left Side -->
+      <div class="tiles-left animate-on-scroll">
+        <div class="name-tile main-tile">
+          <h1 class="display-name">@@name</h1>
+          <p class="tagline">@@tagline</p>
+          <div class="decorative-line"></div>
+        </div>
+
+        <div class="info-tiles">
+
+          @@include('templates/modules/partials/tile.html', {
+            "icon": "@@tile_a_icon",
+            "label": "@@tile_a_label",
+            "value": "@@tile_a_value",
+            "link": "@@tile_a_link"
+          })
+
+          @@include('templates/modules/partials/tile.html', {
+            "icon": "@@tile_b_icon",
+            "label": "@@tile_b_label",
+            "value": "@@tile_b_value",
+            "link": "@@tile_b_link"
+          })
+
+          @@include('templates/modules/partials/tile.html', {
+            "icon": "@@tile_c_icon",
+            "label": "@@tile_c_label",
+            "value": "@@tile_c_value",
+            "link": "@@tile_c_link"
+          })
+
+          @@include('templates/modules/partials/tile.html', {
+            "icon": "@@tile_d_icon",
+            "label": "@@tile_d_label",
+            "value": "@@tile_d_value",
+            "link": "@@tile_d_link"
+          })
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      @@if (tile_image) {
+        <div class="tiles-right animate-on-scroll">
+          <div class="image-tile">
+            <div class="image-placeholder">
+              <div class="placeholder">
+                <img src="@@tile_image" alt="Profile Image" />
+              </div>
+            </div>
+            <div class="image-overlay"></div>
+            <div class="floating-elements">
+              <div class="floating-dot dot-1"></div>
+              <div class="floating-dot dot-2"></div>
+              <div class="floating-dot dot-3"></div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

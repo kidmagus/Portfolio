@@ -1,0 +1,20 @@
+@@if (label) {
+  @@if (link) {
+    <a class="info-tile animate-on-scroll" href="@@link" target="_blank" rel="noopener noreferrer">
+      <div class="tile-icon">@@icon</div>
+      <div class="tile-content">
+        <span class="tile-label">@@label</span>
+        <span class="tile-value">@@value</span>
+      </div>
+    </a>
+  }
+  @@if (!link) {
+    <span class="info-tile animate-on-scroll no-link">
+      <div class="tile-icon">@@icon</div>
+      <div class="tile-content">
+        <span class="tile-label">@@label</span>
+        <span class="tile-value">@@value</span>
+      </div>
+    </span>
+  }
+}

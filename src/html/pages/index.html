@@ -8,11 +8,12 @@
 
 @@include("templates/modules/hero.html")
 
-@@include('templates/modules/tiles.html', {
+@@include('templates/modules/profile.html', {
   "id": "profile",
   "name": "Matthew Samson",
   "tagline": "Frontend Developer",
   "image_position": "right",
+  "tile_image": "images/tile.jpg",
 
   "tile_a_icon": "📍",
   "tile_a_label": "Location",
@@ -33,19 +34,67 @@
   "tile_d_label": "Focus",
   "tile_d_value": "AI Automation & Web Development",
   "tile_d_link": "",
+
 })
 
 @@include("templates/modules/about.html")
 
+@@include("templates/modules/certifications.html")
+
 @@include("templates/modules/services.html")
+
+@@include('templates/modules/skills.html', {
+  "id": "skills",
+  "name": "Skills & Tools",
+  "tagline": "",
+  "image_position": "left",
+  "tile_image": "",
+
+  "tile_a_icon": "🔗",
+  "tile_a_label": "HTML",
+  "tile_a_value": "HyperText Markup Language",
+  "tile_a_link": "",
+
+  "tile_b_icon": "✉️",
+  "tile_b_label": "CSS",
+  "tile_b_value": "Cascading Stylesheet",
+  "tile_b_link": "",
+
+  "tile_c_icon": "📞",
+  "tile_c_label": "JS",
+  "tile_c_value": "JavaScript",
+  "tile_c_link": "",
+
+  "tile_d_icon": "✉️",
+  "tile_d_label": "SASS",
+  "tile_d_value": "Syntactically Awesome Stylesheets",
+  "tile_d_link": "",
+
+  "tile_e_icon": "✉️",
+  "tile_e_label": "Wordpress",
+  "tile_e_value": "Advanced Custom Fields (ACF)",
+  "tile_e_link": "",
+
+  "tile_f_icon": "✉️",
+  "tile_f_label": "n8n",
+  "tile_f_value": "AI Automation Workflow",
+  "tile_f_link": "",
+
+  "tile_g_icon": "✉️",
+  "tile_g_label": "CRM",
+  "tile_g_value": "HubSpot",
+  "tile_g_link": "",
+})
+
 
 @@include("templates/modules/accordions.html")
 
-@@include('templates/modules/tiles.html', {
+@@include('templates/modules/contact.html', {
   "id": "contact",
   "name": "Contact me",
   "tagline": "",
   "image_position": "left",
+  "tile_image": "images/about.jpg",
 
   "tile_a_icon": "🔗",
   "tile_a_label": "LinkedIn",
@@ -65,7 +114,7 @@
   "tile_d_icon": "✉️",
   "tile_d_label": "Outlook",
   "tile_d_value": "msamson19@outlook.com",
-  "tile_d_link": "mailto:msamson19@outlook.com"
+  "tile_d_link": "mailto:msamson19@outlook.com",
 })
 
 

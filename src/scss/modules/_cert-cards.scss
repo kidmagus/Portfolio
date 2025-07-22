@@ -1,0 +1,167 @@
+@use '../utilities/variables' as *;
+@use './mixins/rem' as *;
+@use './mixins/breakpoints' as *;
+@use './vendors/include-media' as *;
+
+
+/* Certifications Section */
+        .certifications-section {
+            background: $primary-color;
+            position: relative;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .certification-card {
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            box-shadow: $shadow-md;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid $border-color;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-8px);
+            box-shadow: $shadow-xl;
+        }
+
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: $gradient-primary;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .certification-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-badge {
+            background: $gradient-accent;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .cert-icon {
+            font-size: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .cert-year {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cert-content {
+            padding: 2rem;
+              display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+
+
+
+
+        .cert-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color:$text-primary;
+        }
+
+        .cert-issuer {
+            font-size: 1rem;
+            color: $primary-color;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cert-description {
+            color: $secondary-color;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tag {
+            background: $bg-secondary;
+            color: $text-primary;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid $border-color;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: $primary-color;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .cert-verify {
+          //  padding: 0 2rem 2rem;
+              margin-top: auto;
+        }
+
+        .verify-link {
+            color:$primary-color;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .verify-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .verify-link:hover {
+            color: $bg-dark;
+        }
+
+        .verify-link:hover::after {
+            transform: translateX(3px);
+        }
