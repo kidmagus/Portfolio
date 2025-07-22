@@ -38,9 +38,9 @@
         .certification-card::before {
             content: '';
             position: absolute;
-            top: 0;
             left: 0;
             right: 0;
+            bottom: 0;
             height: 4px;
             background: $gradient-primary;
             transform: scaleX(0);
@@ -53,7 +53,10 @@
 
         .cert-badge {
             background: $gradient-accent;
-            padding: 1.5rem;
+            padding: 5.5rem 1.5rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             display: flex;
             justify-content: space-between;
             align-items: center;
