@@ -9,5 +9,5 @@
     }
   ],
   "ignoreCommand": "echo 'using gulp, ignore node_modules-based default build'",
-  "outputDirectory": "build"
+  "outputDirectory": "build" 
 }
