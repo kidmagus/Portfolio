@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "public",
+  "outputDirectory": "build",
   "installCommand": "npm install",
   "routes": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/$1"
     }
   ]
 }

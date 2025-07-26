@@ -14,9 +14,9 @@
 !src/
 !src/**
 
-# Allow public folder (output directory)  
-!public/
-!public/**
+# Allow build folder (output directory)  
+!build/
+!build/**
 
 # Allow babel config if you have one
 !.babelrc
