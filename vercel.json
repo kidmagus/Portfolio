@@ -1,6 +1,19 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "build",
+  "outputDirectory": "public",
   "installCommand": "npm install",
-  "framework": null
+  "routes": [
+    {
+      "src": "/src/(.*)",
+      "status": 404
+    },
+    {
+      "src": "/(.*\\.scss)",
+      "status": 404
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
 }

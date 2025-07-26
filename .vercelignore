@@ -1,23 +1,11 @@
-# Ignore source files from serving (but allow for build)
-src/
-gulpfile.js
+# Ignore everything except what's needed for build and serving
+*
 
-# Ignore these from deployment
-node_modules/
-.git/
-.gitignore
-**/*.map
-test/
-README.md
-LICENSE
-.env
-.env.local
-.vscode/
-.idea/
-*.tmp
-*.temp
-.DS_Store
-Thumbs.db
+# Allow build dependencies
+!package.json
+!package-lock.json
+!gulpfile.js
+!src/
 
-# Explicitly ignore SCSS files from being served
-**/*.scss
+# Allow public folder (output directory)
+!public/
