@@ -1,0 +1,11 @@
+# ✅ Don't ignore anything inside /src/
+# because we need it to build SCSS and JS
+
+
+# Only ignore unnecessary files AFTER build
+# If you're NOT serving from /src/, /gulp/, etc. you can ignore:
+
+**/*.map
+test/
+README.md
+LICENSE
