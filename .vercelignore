@@ -6,6 +6,10 @@
 !package-lock.json
 !gulpfile.babel.js
 
+# Allow gulp utilities and tasks
+!gulp/
+!gulp/**
+
 # Allow source directory for build process
 !src/
 !src/**
