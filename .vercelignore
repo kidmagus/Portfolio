@@ -1,0 +1,11 @@
+# Ignore raw SCSS folders
+css/base/
+css/layout/
+css/mixins/
+css/modules/
+css/utilities/
+css/vendors/
+*.scss
+
+# Keep only final CSS
+!css/main.css
