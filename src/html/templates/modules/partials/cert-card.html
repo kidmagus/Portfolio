@@ -10,8 +10,10 @@
     <div class="cert-skills">
       @@skills
     </div>
-    <div class="cert-verify">
-      <a href="@@link" class="verify-link">Verify Certificate</a>
-    </div>
+    @@if (link) {
+      <div class="cert-verify">
+        <a href="@@link" class="verify-link">Verify Certificate</a>
+      </div>
+    }
   </div>
 </div>

@@ -1,0 +1,41 @@
+@use '../utilities/variables' as *;
+@use '../mixins/cards' as *;
+@use '../mixins/rem' as *;
+@use '../mixins/breakpoints' as *;
+@use '../vendors/include-media' as *;
+
+/* General Cards */
+.cards-grid {
+    @include card-grid();
+}
+
+.card {
+    @include card-base;
+    @include card-hover();
+    @include card-accent-bar();
+    @include card-padding();
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: $gradient-accent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    color: $text-secondary;
+    line-height: 1.6;
+}

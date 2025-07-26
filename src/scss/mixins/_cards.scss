@@ -1,0 +1,62 @@
+@use '../utilities/variables' as *;
+@use './rem' as *;
+@use './breakpoints' as *;
+@use '../vendors/include-media' as *;
+
+/* Card Base Mixins */
+@mixin card-base {
+    background: white;
+    border-radius: 20px;
+    box-shadow: $shadow-md;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin card-hover($lift: -10px) {
+    &:hover {
+        transform: translateY($lift);
+        box-shadow: $shadow-xl;
+    }
+}
+
+@mixin card-accent-bar($position: top, $gradient: $gradient-primary) {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        @if $position == top {
+            top: 0;
+        } @else {
+            bottom: 0;
+        }
+        height: 4px;
+        background: $gradient;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+@mixin card-grid($min-width: 300px, $gap: 2rem) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap;
+    margin-top: 3rem;
+
+    @include media('>tablet') {
+        grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    }
+}
+
+@mixin card-padding($mobile: 1.5rem, $desktop: 2rem) {
+    padding: $mobile;
+
+    @include media('>phone') {
+        padding: $desktop;
+    }
+}

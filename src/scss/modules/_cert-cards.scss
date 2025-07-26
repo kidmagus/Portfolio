@@ -1,7 +1,8 @@
 @use '../utilities/variables' as *;
-@use './mixins/rem' as *;
-@use './mixins/breakpoints' as *;
-@use './vendors/include-media' as *;
+@use '../mixins/cards' as *;
+@use '../mixins/rem' as *;
+@use '../mixins/breakpoints' as *;
+@use '../vendors/include-media' as *;
 
 
 /* Certifications Section */
@@ -11,56 +12,30 @@
         }
 
         .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            @include card-grid(360px);
         }
 
         .certification-card {
-            background: white;
-            border-radius: 20px;
+            @include card-base;
+            @include card-hover(-8px);
+            @include card-accent-bar(bottom);
             padding: 0;
-            box-shadow: $shadow-md;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
             border: 1px solid $border-color;
             display: flex;
             flex-direction: column;
         }
 
-        .certification-card:hover {
-            transform: translateY(-8px);
-            box-shadow: $shadow-xl;
-        }
-
-        .certification-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 4px;
-            background: $gradient-primary;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .certification-card:hover::before {
-            transform: scaleX(1);
-        }
-
         .cert-badge {
             background: $gradient-accent;
             padding: 5.5rem 1.5rem;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: white;
+            border-bottom: 3px solid $primary-color;
         }
 
         .cert-icon {
@@ -86,20 +61,16 @@
 
         .cert-content {
             padding: 2rem;
-              display: flex;
+            display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
-
-
-
-
 
         .cert-title {
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            color:$text-primary;
+            color: $text-primary;
         }
 
         .cert-issuer {
@@ -131,21 +102,20 @@
             font-weight: 500;
             border: 1px solid $border-color;
             transition: all 0.3s ease;
-        }
 
-        .skill-tag:hover {
-            background: $primary-color;
-            color: white;
-            transform: translateY(-1px);
+            &:hover {
+                background: $primary-color;
+                color: white;
+                transform: translateY(-1px);
+            }
         }
 
         .cert-verify {
-          //  padding: 0 2rem 2rem;
-              margin-top: auto;
+            margin-top: auto;
         }
 
         .verify-link {
-            color:$primary-color;
+            color: $primary-color;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
@@ -154,17 +124,17 @@
             gap: 0.5rem;
             transition: all 0.3s ease;
             position: relative;
-        }
 
-        .verify-link::after {
-            content: '→';
-            transition: transform 0.3s ease;
-        }
+            &::after {
+                content: '→';
+                transition: transform 0.3s ease;
+            }
 
-        .verify-link:hover {
-            color: $bg-dark;
-        }
+            &:hover {
+                color: $bg-dark;
 
-        .verify-link:hover::after {
-            transform: translateX(3px);
+                &::after {
+                    transform: translateX(3px);
+                }
+            }
         }
