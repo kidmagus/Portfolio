@@ -1,0 +1,7 @@
+src/
+**/*.scss
+**/*.sass
+**/*.map
+**/*.js
+!build/js/bundle.min.js
+!build/css/style.min.css
