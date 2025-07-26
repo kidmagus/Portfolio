@@ -1,16 +1,11 @@
-# Don't ignore source files - Vercel needs them for building
-# src/scss/
-# src/js/
-# gulpfile.js
-# package.json
-# package-lock.json
+# Ignore source files from serving (but allow for build)
+src/
+gulpfile.js
 
-# Ignore these from deployment (but not from build)
+# Ignore these from deployment
 node_modules/
 .git/
 .gitignore
-
-# Ignore development files that aren't needed for build
 **/*.map
 test/
 README.md
@@ -19,9 +14,10 @@ LICENSE
 .env.local
 .vscode/
 .idea/
-
-# Ignore temporary files
 *.tmp
 *.temp
 .DS_Store
 Thumbs.db
+
+# Explicitly ignore SCSS files from being served
+**/*.scss
