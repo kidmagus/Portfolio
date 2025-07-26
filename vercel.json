@@ -8,12 +8,24 @@
       "status": 404
     },
     {
+      "src": "/gulp/(.*)",
+      "status": 404
+    },
+    {
       "src": "/(.*\\.scss)",
       "status": 404
     },
     {
+      "src": "/gulpfile.babel.js",
+      "status": 404
+    },
+    {
+      "src": "/package.json",
+      "status": 404
+    },
+    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/build/$1"
     }
   ]
 }

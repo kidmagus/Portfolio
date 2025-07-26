@@ -22,3 +22,6 @@
 !.babelrc
 !babel.config.js
 !.babelrc.js
+
+# Ignore all SCSS files from being served
+**/*.scss
