@@ -1,13 +1,19 @@
 {
   "builds": [
     {
-      "src": "package.json",
+      "src": "gulpfile.babel.js",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build"
       }
     }
   ],
-  "ignoreCommand": "echo 'using gulp, ignore node_modules-based default build'",
-  "outputDirectory": "build" 
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "cleanUrls": true,
+  "outputDirectory": "build"
 }
