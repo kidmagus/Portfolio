@@ -1,11 +1,20 @@
-# Ignore everything except what's needed for build and serving
+# Ignore everything first
 *
 
-# Allow build dependencies
+# Allow essential build files
 !package.json
 !package-lock.json
-!gulpfile.js
-!src/
+!gulpfile.babel.js
 
-# Allow public folder (output directory)
+# Allow source directory for build process
+!src/
+!src/**
+
+# Allow public folder (output directory)  
 !public/
+!public/**
+
+# Allow babel config if you have one
+!.babelrc
+!babel.config.js
+!.babelrc.js
