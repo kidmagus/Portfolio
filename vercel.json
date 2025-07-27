@@ -1,13 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
-  "cleanUrls": true,
+  "buildCommand": "npm run build",
   "outputDirectory": "build"
 }
