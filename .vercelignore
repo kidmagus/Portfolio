@@ -1,6 +1,0 @@
-src/
-gulp/
-gulpfile.babel.js
-*.scss
-*.sass
-node_modules/
