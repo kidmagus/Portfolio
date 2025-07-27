@@ -2,6 +2,7 @@
 node_modules
 
 # Ignore build folder
+build
 dist
 
 # Ignore generated .scss components
