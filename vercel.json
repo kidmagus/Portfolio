@@ -1,4 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "build"
+  "outputDirectory": "build",
+  "functions": {},
+  "routes": [
+    {
+      "src": "/.*\\.scss$",
+      "status": 404
+    }
+  ]
 }
