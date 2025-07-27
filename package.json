@@ -4,6 +4,7 @@
 	"main": "gulpfile.babel.js",
 	"scripts": {
 		"dev": "cross-env NODE_ENV=developmnent gulp",
+		"build": "gulp build",
 		"watch": "npm run dev",
 		"publish": "cross-env NODE_ENV=production gulp publish",
 		"test": "echo \"Error: no test specified\" && exit 1"
