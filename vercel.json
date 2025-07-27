@@ -1,4 +1,5 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "build"
+  "outputDirectory": "build",
+  "ignoreCommand": "echo 'No need to re-deploy if nothing has changed'"
 }

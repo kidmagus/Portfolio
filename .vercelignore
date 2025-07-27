@@ -1,10 +1,6 @@
-# Ignore all source files and Gulp configs
 src/
 gulp/
 gulpfile.babel.js
-.vercelignore
-babel.config.js
-node_modules/
-*.md
 *.scss
-*.map
+*.sass
+node_modules/
