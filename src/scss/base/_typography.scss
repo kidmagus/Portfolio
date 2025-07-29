@@ -28,9 +28,9 @@ h3 {
 }
 
 p {
-    font-size: rem(16px);
+    font-size: rem(14px);
 
     @include media ('>tablet') {
-        font-size: rem(20px);
+        font-size: rem(16px);
     }
 }
